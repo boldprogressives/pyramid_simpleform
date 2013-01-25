@@ -144,6 +144,10 @@ class Form(object):
         """
         Returns any errors for a given field as a list.
         """
+        if isinstance(self.errors, basestring):
+            return []
+        if isinstance(self.errors, list):
+            return []
         errors = self.errors.get(field, [])
         if isinstance(errors, basestring):
             errors = [errors]

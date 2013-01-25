@@ -140,6 +140,13 @@ class Form(object):
             errors += self.errors_for(field)
         return errors
 
+    def non_field_errors(self):
+        if isinstance(self.errors, dict):
+            return []
+        if isinstance(self.errors, basestring):
+            return [self.errors]
+        return self.errors
+
     def errors_for(self, field):
         """
         Returns any errors for a given field as a list.

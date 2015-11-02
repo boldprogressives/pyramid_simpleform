@@ -16,7 +16,7 @@ requires = [
     'formencode',
 ]
 
-setup(name='pyramid_simpleform',
+setup(name='pyramid_simpleform-boldprogressives_fork',
       version='0.7',
       description='pyramid_simpleform',
       long_description=README + '\n\n' + CHANGES,
